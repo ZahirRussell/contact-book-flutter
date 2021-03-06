@@ -3,6 +3,8 @@ import 'package:flutter_signin/screens/login.dart';
 import 'package:flutter_signin/screens/signup.dart';
 
 class MainScreen extends StatefulWidget {
+  static const routeName = '/main';
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -28,8 +30,7 @@ class _MainScreenState extends State<MainScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(32.0)),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Login()));
+                  Navigator.of(context).pushReplacementNamed(Login.routeName);
                 },
                 child: Text(
                   'LOGIN',
@@ -48,8 +49,7 @@ class _MainScreenState extends State<MainScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(32.0)),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignUp()));
+                  Navigator.of(context).pushReplacementNamed(SignUp.routeName);
                 },
                 child: Text(
                   'SIGN UP',

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin/screens/homepage.dart';
 
 class Login extends StatefulWidget {
+  static const routeName = '/login';
   @override
   _LoginState createState() => _LoginState();
 }
@@ -42,6 +43,8 @@ class _LoginState extends State<Login> {
                   hintText: 'Password',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(22.0))),
+              keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
               onChanged: (value) => setState(() {
                 _password = value;
               }),
@@ -59,10 +62,8 @@ class _LoginState extends State<Login> {
                   FirebaseAuth.instance
                       .signInWithEmailAndPassword(
                           email: _email, password: _password)
-                      .then((user) => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HomeScreen())))
+                      .then((user) => Navigator.of(context)
+                          .pushReplacementNamed(HomeScreen.routeName))
                       .catchError((e) {
                     print(e);
                   });

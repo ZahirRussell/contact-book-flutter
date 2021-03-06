@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin/services/users.dart';
 
 class SignUp extends StatefulWidget {
+  static const routeName = '/signup';
   @override
   _SignUpState createState() => _SignUpState();
 }

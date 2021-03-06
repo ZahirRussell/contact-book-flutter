@@ -10,8 +10,8 @@ class UserManagement {
         .collection('users')
         .document(firebaseUser.uid)
         .setData({'email': user.email, 'uid': user.uid})
-        .then((value) => Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen())))
+        .then((value) =>
+            Navigator.of(context).pushReplacementNamed(HomeScreen.routeName))
         .catchError((e) {
           print(e);
         });
