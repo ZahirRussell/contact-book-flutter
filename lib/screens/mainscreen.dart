@@ -12,7 +12,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.red,
       ),
       body: Container(
         color: Colors.white,
@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
           Center(
             child: FlatButton(
                 padding: EdgeInsets.symmetric(vertical: 18, horizontal: 80),
-                color: Colors.deepPurple,
+                color: Colors.red,
                 textColor: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(32.0)),

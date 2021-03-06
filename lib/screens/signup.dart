@@ -15,7 +15,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.red,
         title: Text('Sign Up Form'),
       ),
       body: SingleChildScrollView(
@@ -51,7 +51,7 @@ class _SignUpState extends State<SignUp> {
             ),
             FlatButton(
                 padding: EdgeInsets.symmetric(vertical: 18, horizontal: 72),
-                color: Colors.deepPurple,
+                color: Colors.red,
                 textColor: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(32.0)),

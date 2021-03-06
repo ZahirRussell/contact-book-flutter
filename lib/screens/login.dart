@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.red,
         title: Text('Login Form'),
       ),
       body: SingleChildScrollView(
@@ -51,7 +51,7 @@ class _LoginState extends State<Login> {
             ),
             FlatButton(
                 padding: EdgeInsets.symmetric(vertical: 18, horizontal: 72),
-                color: Colors.deepPurple,
+                color: Colors.red,
                 textColor: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(32.0)),
